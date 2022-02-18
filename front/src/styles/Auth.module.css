@@ -1,0 +1,27 @@
+.Auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: large;
+    flex-direction: column;
+}
+
+.Wrong {
+    background-color: brown;
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    opacity: 0.8;
+    border-radius: 10px;
+    min-width: 15vw;
+    overflow-x:hidden
+    
+}
+
+.WrongNone {
+    display: none;
+}

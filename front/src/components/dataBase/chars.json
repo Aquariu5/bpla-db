@@ -1,0 +1,88 @@
+{
+    "chars": [
+              {
+                        "name": "RQ-11 Raven",
+                        "about": {
+                            "wing": "1.5 м",
+                            "weight": "1.7 кг",
+                            "vel": "95 км/ч",
+                            "radius": "10 км",
+                            "engine": "электрический",
+                            "length": "96 см",
+                            "duration": "50 мин"
+                        }
+              },
+              {
+                "name": "Wasp III",
+                "about": {
+                    "wing": "73.6 cм",
+                    "weight": "454 г",
+                    "vel": "-",
+                    "radius": "5 км",
+                    "engine": "-",
+                    "length": "-",
+                    "duration": "45 мин"
+                }
+              },
+              {
+                "name": "RQ-20 Puma",
+                "about": {
+                    "wing": "2.8 м",
+                    "weight": "6.1 кг",
+                    "vel": "83 км/ч",
+                    "radius": "15 км",
+                    "engine": "электрический",
+                    "length": "1.4 м",
+                    "duration": "3.3 ч"
+                }
+              },
+              {
+                "name": "RQ-16 T-Hawk",
+                "about": {
+                    "wing": "-",
+                    "weight": "6.6 кг",
+                    "vel": "81 км/ч",
+                    "radius": "11 км",
+                    "engine": "двс",
+                    "length": "-",
+                    "duration": "40 мин"
+                }
+              },
+              {
+                "name": "MQ-9 Reaper",
+                "about": {
+                    "wing": "20 м",
+                    "weight": "2223 кг",
+                    "vel": "400 км/ч",
+                    "radius": "1900 км",
+                    "engine": "турбовинтовой",
+                    "length": "11 м",
+                    "duration": "27 ч"
+                }
+              },
+              {
+                "name": "RQ-4 Global Hawk",
+                "about": {
+                    "wing": "35.42 м",
+                    "weight": "5148 кг",
+                    "vel": "837 км/ч",
+                    "radius": "5500 км",
+                    "engine": "турбовинтовой",
+                    "length": "13.53 м",
+                    "duration": "36 ч"
+                }
+              },
+              {
+                "name": "RQ-170 Sentinel",
+                "about": {
+                    "wing": "16 м",
+                    "weight": "-",
+                    "vel": "-",
+                    "radius": "-",
+                    "engine": "-",
+                    "length": "-",
+                    "duration": "-"
+                }
+              }
+    ]
+}
