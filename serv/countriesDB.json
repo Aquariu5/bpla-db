@@ -1,0 +1,87 @@
+{
+          "countries": [
+                    {
+                              "name": "США",
+                              "to": [
+                                        "RQ-11 Raven",
+                                        "Wasp III",
+                                        "RQ-20 Puma",
+                                        "RQ-16 T-Hawk",
+                                        "MQ-9 Reaper",
+                                        "RQ-4 Global Hawk",
+                                        "RQ-170 Sentinel",
+                                        "Boeing X-48",
+                                        "RQ-3 Darkstar",
+                                        "RQ-5 Hunter",
+                                        "Scarab",
+                                        "MQ-8 Scout",
+                                        "RQ-6 Outrider",
+                                        "RQ-7A Shadow",
+                                        "YQM-98A Compass Cope"
+                              ]
+                    },
+                    {
+                              "name": "Россия",
+                              "to": [
+                                        "Дозор-600",
+                                        "Корсар",
+                                        "С-70 Охотник",
+                                        "Гелиос-РЛД",
+                                        "Oрион",
+                                        "ZALA 421-08",
+                                        "Иркут-200",
+                                        "Типчак",
+                                        "Форпост",
+                                        "Орлан-10"
+                              ]
+                    },
+                    {
+                              "name": "Израиль",
+                              "to": [
+                                        "Orbiter",
+                                        "Эйтан",
+                                        "Harop",
+                                        "ADS 95 RANGER",
+                                        "Aerostar",
+                                        "Aeronautics Dominator",
+                                        "Elbit Hermes 180",
+                                        "Skylark",
+                                        "Mastiff",
+                                        "Panther",
+                                        "Hermes 450",
+                                        "Hermes 1500"
+                              ]
+                    },
+                    {
+                              "name": "Китай",
+                              "to": [
+                                        "Wing Loong",
+                                        "DF-ZF",
+                                        "CAIG Wing Loong",
+                                        "AVIC Cloud Shadow",
+                                        "CASC Rainbow CH-4",
+                                        "ASN-206"
+                              ]
+                    },
+                    {
+                              "name": "Турция",
+                              "to": [
+                                        "Kargu-2",
+                                        "Bayraktar TB2",
+                                        "TAI Gözcü",
+                                        "TAI ANKA"
+                              ]
+                    },
+                    {
+                              "name": "Канада",
+                              "to": [
+                                        "CL-89",
+                                        "CL-227 Sentinel",
+                                        "CL-289",
+                                        "CL-327 Guardian",
+                                        "CL-427 Puma",
+                                        "CQ-10 Snow Goose"
+                              ]
+                    }
+          ]
+}
