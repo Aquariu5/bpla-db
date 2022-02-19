@@ -46,7 +46,7 @@ export const Countries = (props) => {
     const [compareMode, setCompareMode] = useState([]);
 
     const [country, setCountry] = useState('Россия')
-    const [chars, setChars] = useState({});
+    const [chars, setChars] = useState({}); 
     const [compareOpt, setCompareOpt] = useState(false);
 
     const [allSelected, setAllSelected] = useState([]);
@@ -104,16 +104,15 @@ export const Countries = (props) => {
         }
 
     }, [sort])
-    //console.log(jsx)                 {
-    //                 countNames.map(el => <option>{el}</option>)
-    //                }
-    const showPic = (flag, name) => {
+
+    //эффекта не дает, при наведении на ячейку компонент CompTable перерисовывается 12 раз!
+    const showPic = useCallback((flag, name) => {
         setUrlName(`http://localhost:5000/image?name=${name}`);
         setVisible(flag);
         
-    }
+    },[]);
 
-    const compareTwo = async () => {
+    const compareTwo = useCallback(async () => {
         const names = allSelected;
         const char1 = await getChars(names[0]);
         const char2 = await getChars(names[1]);
@@ -121,10 +120,10 @@ export const Countries = (props) => {
         let results = getCompareChars(char1, char2);
         setCompareMode(results);
         setChars2([char1, char2]);
-        
+        console.log('results', results);
         setShowCompareModal(true);
 
-    }
+    },[allSelected]);
 
     
     const setNameFunc = (e) => {
@@ -142,7 +141,7 @@ export const Countries = (props) => {
 
 
 
-    const openModal = async (name) => {
+    const openModal = useCallback(async (name) => {
 
         if (compareOpt) { // если активирована опция
             return;
@@ -153,7 +152,7 @@ export const Countries = (props) => {
         let chars = await getChars(name);
         //console.log('chars', chars);
         setChars(chars);
-    }
+    },[compareOpt, showModal]);
 
     const getChars = async (name) => {
         console.log('before req', name);
@@ -178,12 +177,12 @@ export const Countries = (props) => {
         setName('');
     }
 
-    const editHandler = (name, char) => {
+    const editHandler = useCallback((name, char) => {
         console.log('click', name, char);
         setEdit([name, char]);
-    }
+    },[edit]);
 
-    const saveValue = async (name, char, value) => {
+    const saveValue = useCallback (async (name, char, value) => {
         console.log('name, char, val', name, char, value);
         let status = (await axios.get(`http://localhost:5000/editcell?name=${name}&char=${char}&value=${value}`)).data;
         console.log('status', status);
@@ -202,7 +201,18 @@ export const Countries = (props) => {
         }
 
 
-    }
+    },[chars]);
+
+    const selectedHandler = useCallback((val) => {
+        if (val === 'no') {
+
+        }
+        else if (allSelected.findIndex(el => val == el) == -1)
+            setAllSelected([...allSelected, val])
+        else
+            setAllSelected([...allSelected].filter(el => el != val))
+    },[allSelected]);
+
     return (
         isload ?
             <div className={cl.Countries}>
@@ -224,17 +234,7 @@ export const Countries = (props) => {
                                     compareOpt={compareOpt}
                                     setCompareOpt={setCompareOpt}
                                     propFlag={true}
-                                    allSelected = {val =>  {
-                                        //console.log('allselected', allSelected);
-                                        if (val === 'no') {
-                                            //setAllSelected([]);
-                    
-                                        }
-                                        else if (allSelected.findIndex(el => val == el) == -1)
-                                            setAllSelected([...allSelected, val])
-                                        else
-                                            setAllSelected([...allSelected].filter(el => el != val))
-                                    }}
+                                    allSelected = {val =>  selectedHandler(val)}
                                 />
                             )
 

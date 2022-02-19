@@ -25,6 +25,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         // value={value}
                         // setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={0}
                         body={body}
                     />
                     <TableCharString
@@ -38,6 +39,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         // value={value}
                         // setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={1}
                         body={body}
                     />
 
@@ -51,6 +53,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         saveValue={saveValue}
                         //setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={2}
                         body={body}
                     />
                     
@@ -64,6 +67,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         saveValue={saveValue}
                         //setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={3}
                         body={body}
                     />
                     <TableCharString
@@ -76,6 +80,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         saveValue={saveValue}
                         //setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={4}
                         body={body}
                     />
                     <TableCharString
@@ -88,6 +93,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         saveValue={saveValue}
                         //setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={5}
                         body={body}
                     />
                     <TableCharString
@@ -100,6 +106,7 @@ export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, v
                         saveValue={saveValue}
                         //setValue={setValue}
                         styleMode={styleMode}
+                        styleIdx={6}
                         body={body}
                     />
                 {/* <tr>

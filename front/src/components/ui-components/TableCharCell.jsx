@@ -1,10 +1,11 @@
 import { useState } from "react";
 import {Button} from "react-bootstrap";
 import Tooltip  from "@mui/material/Tooltip";
-const TableCharCell = ({title, header, char, saveValue, styleMode, body}) => {
+const TableCharString = ({title, header, char, saveValue, styleMode, body, styleIdx}) => {
     const [test, setTest] = useState('');
     const [value, setValue] = useState(body[char]);
     const [edit, setEdit] = useState(['','']);
+    console.log('header, stylemode', header, styleMode);
     return (
         <tr>
         <td>{title}</td>
@@ -19,7 +20,7 @@ const TableCharCell = ({title, header, char, saveValue, styleMode, body}) => {
             </td>
             :
             <Tooltip title="Изменить" placement="left-start">
-                <td style={{background: styleMode ? styleMode[0] : ''}} onClick={() => {setEdit(header, char);setValue(body[char])}}>{body[char]}</td>
+                <td style={{background: styleMode ? styleMode[styleIdx] : ''}} onClick={() => {setEdit(header, char);setValue(body[char])}}>{body[char]}</td>
             </Tooltip>
             
         }
@@ -28,4 +29,4 @@ const TableCharCell = ({title, header, char, saveValue, styleMode, body}) => {
     )
 }
 
-export default TableCharCell;
+export default TableCharString;

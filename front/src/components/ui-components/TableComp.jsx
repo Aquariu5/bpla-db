@@ -3,9 +3,8 @@ import { Table } from "react-bootstrap";
 import cl from '../../styles/UI.module.css';
 import { TableCell } from "./TableCell";
 export const TableComp = ({header, body, onOver, onOut, onClick, propFlag, compareOpt, setCompareOpt, allSelected}) => {
-    //const [selected, setSelected] = useState(0);
-    const [name, setName] = useState('');
-    //allSelected(selected);
+
+    console.log('tablecomp');
     //console.log('compareoptintalbe', compareOpt);
     return (
         <Table striped bordered className={cl.Table}>
