@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Table, Button} from "react-bootstrap";
 import cl from '../../styles/UI.module.css';
 import TableCharString from "./TableCharCell";
+
 export const TableChars = ({header, body, styleMode,/* onClick, edit, setEdit, value, setValue, */saveValue}) => {
     return (
         <Table striped bordered className={cl.Table}>

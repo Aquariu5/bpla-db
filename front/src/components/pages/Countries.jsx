@@ -59,7 +59,6 @@ export const Countries = (props) => {
     useEffect(async () => {
         setLoad(false);
         let fetchCounts;
-        console.log('zapros')
         fetchCounts = await axios.get('http://localhost:5000/countries');
         fetchCounts = fetchCounts.data.countries;
         setCountries(JSON.parse(JSON.stringify(fetchCounts)));
