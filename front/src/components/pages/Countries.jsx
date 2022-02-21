@@ -26,7 +26,7 @@ export const Countries = (props) => {
     //     for (let fi of fields)
     //         jsx += <li>{fi}</li>
     // }
-    
+
     let init = []
     const [body, setBody] = useState(init);
     const [str, setStr] = useState({ country: 'Россия', name: '' });
@@ -57,6 +57,7 @@ export const Countries = (props) => {
     const [edit, setEdit] = useState(['', '']);
     const [editValue, setEditValue] = useState('');
     useEffect(async () => {
+        console.log('effect');
         setLoad(false);
         let fetchCounts;
         fetchCounts = await axios.get('http://localhost:5000/countries');
@@ -69,6 +70,7 @@ export const Countries = (props) => {
     }, [countries.length, showAddModal]);
 
     useEffect(async () => {
+        console.log('effect2');
         if (countries != undefined && countries.length) {
             //console.log('Сработал');
             const cou = {
@@ -152,17 +154,17 @@ export const Countries = (props) => {
         let chars = await getChars(name);
         //console.log('chars', chars);
         setChars(chars);
-    },[compareOpt, showModal]);
+    },[compareOpt]);
 
-    const getChars = async (name) => {
+    const getChars = useCallback(async (name) => {
         console.log('before req', name);
         let chars = (await axios.get(`http://localhost:5000/info?name=${name}`)).data;
         return chars;
-    }
+    },[]);
 
-    const addNote = () => {
+    const addNote = useCallback(() => {
         setShowAddModal(true);
-    }
+    },[]);
 
 
     const add = () => {
@@ -225,7 +227,7 @@ export const Countries = (props) => {
                             filteredCountries.map(count => {
                             return (
                                 <TableComp
-                                    style={{width: '30px'}}
+                                    
                                     header={count.name}
                                     body={count.to}
                                     onOver={(flag, name) => showPic(flag, name)}
@@ -244,6 +246,7 @@ export const Countries = (props) => {
                         <p>Ждите</p>
                         }
                     </div>
+                    
                     <div style={{display: 'flex', flexDirection: 'row'}}>
                         <div>
                             <Button style={{margin: '10px'}} onClick={addNote}>+</Button>
@@ -283,9 +286,6 @@ export const Countries = (props) => {
                         <Container>
                             <Button variant="primary" disabled={!(allSelected.length == 2)} onClick={compareTwo}>Перейти к сравнению</Button>
                         </Container>
-                        {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <Button variant="primary">Сравнить</Button>
-                        </div> */}
                     </div>
                     
                 </div>

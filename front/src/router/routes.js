@@ -6,6 +6,7 @@ import { Contacts } from "../components/pages/Contacts"
 import { Countries } from "../components/pages/Countries"
 import { Music } from "../components/pages/Music"
 import Auth from "../components/pages/Auth"
+import { Test } from "../components/Test"
 export  const routes = [
     {path: '/base', exact: true, component: Base},
     {path: '/attention', exact: true, component: Attention},
@@ -14,5 +15,6 @@ export  const routes = [
     {path: '/contacts', exact: true, component: Contacts},
     {path: '/countries', exact: true, component: Countries},
     {path: '/music', exact: true, component: Music},
-    {path: '/auth', exact: true, component: Auth}
+    {path: '/auth', exact: true, component: Auth},
+    {path: '/test', exact: true, component: Test}
 ]
