@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, ToggleButton, Navbar, Container, NavDropdown, Offcanvas, Card, Pagination} from 'react-bootstrap';
-import { TableComp } from "../ui-components/TableComp";
+import TableComp from "../ui-components/TableComp";
 import cl from '../../styles/Base.module.css'
 import Header from "../ui-components/Header";
 import { useHistory } from "react-router-dom";

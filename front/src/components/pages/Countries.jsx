@@ -9,7 +9,7 @@ import { getCompareChars } from '../utils/compareChars';
 import fs, { cp } from 'fs';
 import { useEffect } from 'react';
 import axios from 'axios';
-import { TableComp } from '../ui-components/TableComp';
+import TableComp from '../ui-components/TableComp';
 import { TableChars } from '../ui-components/TableChars';
 //const fetch = require('node-fetch');
 import cl from '../../styles/Countries.module.css'

@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState, memo} from "react";
 
-export const TableCell = ({onOver, onOut, onClick, el, compareOpt, status}) => {
+const TableCell = ({onOver, onOut, onClick, el, compareOpt, status}) => {
     const [selected, setSelected] = useState(false);
 
     useEffect(() => {
@@ -11,14 +11,14 @@ export const TableCell = ({onOver, onOut, onClick, el, compareOpt, status}) => {
             status(0);
         }
 
-    },[])
-    const onClickHandler = useCallback(() => {
+    },[compareOpt])
+    const onClickHandler = () => {
         if (compareOpt) {
             setSelected(!selected);
             status(el);
         }
         onClick()
-    },[selected]);
+    };
     return (
         <td style={{background: selected ? 'red' : ''}}
             onMouseOver={onOver}
@@ -29,3 +29,5 @@ export const TableCell = ({onOver, onOut, onClick, el, compareOpt, status}) => {
         </td>
     )
 }
+
+export default TableCell;

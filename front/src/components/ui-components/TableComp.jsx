@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Table } from "react-bootstrap";
 import cl from '../../styles/UI.module.css';
-import { TableCell } from "./TableCell";
-export const TableComp = ({header, body, onOver, onOut, onClick, propFlag, compareOpt, setCompareOpt, allSelected}) => {
+import TableCell from "./TableCell";
+const TableComp = ({header, body, onOver, onOut, onClick, propFlag, compareOpt, setCompareOpt, allSelected}) => {
 
     console.log('tablecomp');
     //console.log('compareoptintalbe', compareOpt);
@@ -71,3 +71,5 @@ export const TableComp = ({header, body, onOver, onOut, onClick, propFlag, compa
         </Table>
     )
 }
+
+export default TableComp;
